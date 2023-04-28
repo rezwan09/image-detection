@@ -1,0 +1,9 @@
+flask
+boto3
+datetime
+numpy
+pandas
+matplotlib
+sklearn
+tensorflow=2.12.0
+keras
