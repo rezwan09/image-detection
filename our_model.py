@@ -92,3 +92,4 @@ def detect_images():
     stop = timeit.default_timer()
     print(f'Time: {stop - start}')
     return y_pred_classes
+
