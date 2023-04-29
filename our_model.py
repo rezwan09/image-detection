@@ -7,7 +7,8 @@ from PIL import Image
 import sklearn
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
-import keras
+import tensorflow
+from tensorflow import keras
 from keras.utils import to_categorical
 from keras.models import load_model
 import timeit
