@@ -7,14 +7,22 @@ from PIL import Image
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
 # from sklearn.metrics import  plot_confusion_matrix
-from tensorflow.keras.utils import to_categorical
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPool2D
-from tensorflow.keras import backend as K
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
-from tensorflow.keras.models import load_model
+import tensorflow
+import keras.utils
+import keras.models
+import keras.optimizers
+import keras.preprocessing.image
+import keras.callbacks
+import keras.models
+
+from keras.utils import to_categorical
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPool2D
+from keras import backend as K
+from keras.optimizers import Adam
+from keras.preprocessing.image import ImageDataGenerator
+from keras.callbacks import EarlyStopping, ReduceLROnPlateau
+from keras.models import load_model
 from keras.utils.vis_utils import plot_model
 import timeit
 
