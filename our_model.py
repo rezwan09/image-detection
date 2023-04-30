@@ -4,13 +4,18 @@ import os
 
 from glob import glob
 from PIL import Image
-import sklearn
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
-import tensorflow
-from tensorflow import keras
-from keras.utils import to_categorical
-from keras.models import load_model
+# from sklearn.metrics import  plot_confusion_matrix
+from tensorflow.keras.utils import to_categorical
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPool2D
+from tensorflow.keras import backend as K
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
+from tensorflow.keras.models import load_model
+from keras.utils.vis_utils import plot_model
 import timeit
 
 
@@ -92,4 +97,3 @@ def detect_images():
     stop = timeit.default_timer()
     print(f'Time: {stop - start}')
     return y_pred_classes
-

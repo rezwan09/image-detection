@@ -128,10 +128,10 @@ def detect_images():
         }
     )
 
-    return ret_classes
+    return str(ret_classes)
 
 
 if __name__ == "__main__":
-    app.run(host='localhost', port=5001, debug=True)
-    #app.run(host='0.0.0.0', port=8080)
+    #app.run(host='localhost', port=5001, debug=True)
+    app.run(host='0.0.0.0', port=8080)
     print('Server running with flask')
