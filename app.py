@@ -28,7 +28,7 @@ def index():
 def detect_image():
     # Image Detection code here
     # Update num of active users
-    dynamodb = boto3.resource('dynamodb', region_name="us-west-2", aws_access_key_id="AKIAYNRUVG7WBTWWSBF4",aws_secret_access_key="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")
+    dynamodb = boto3.resource('dynamodb', region_name="us-west-2")
     table = dynamodb.Table("users_count")
 
     response = table.get_item(
@@ -80,8 +80,7 @@ def detect_image():
 def detect_images():
     # Image Detection code here
     # Update num of active users
-    dynamodb = boto3.resource('dynamodb', region_name="us-west-2", aws_access_key_id="AKIAYNRUVG7WBTWWSBF4",
-                              aws_secret_access_key="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")
+    dynamodb = boto3.resource('dynamodb', region_name="us-west-2")
     table = dynamodb.Table("users_count")
 
     response = table.get_item(
@@ -132,6 +131,6 @@ def detect_images():
 
 
 if __name__ == "__main__":
-    #app.run(host='localhost', port=5001, debug=True)
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='localhost', port=5001, debug=True)
+    #app.run(host='0.0.0.0', port=8080)
     print('Server running with flask')
